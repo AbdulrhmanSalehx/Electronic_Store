@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntryActivity">
+
+    <TextView
+        android:id="@+id/ownerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer : - "
+        app:layout_constraintBaseline_toBaselineOf="@id/owneredit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/owneredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="13"
+        app:layout_constraintStart_toEndOf="@id/ownerview"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/manufview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manufacturer:-"
+        app:layout_constraintBaseline_toBaselineOf="@id/manufedit"
+        app:layout_constraintTop_toBottomOf="@id/ownerview"
+        app:layout_constraintEnd_toStartOf="@id/manufedit"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/manufedit"
+        android:ems="11"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/owneredit"
+        app:layout_constraintStart_toEndOf="@id/manufview"
+
+        />
+
+    <TextView
+        android:id="@+id/seriaview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serial Num : - "
+        app:layout_constraintBaseline_toBaselineOf="@id/seriaedit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manufview" />
+
+    <EditText
+        android:id="@+id/seriaedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/seriaview"
+        app:layout_constraintTop_toBottomOf="@+id/manufedit"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dcview"
+        android:text="DC :- "
+        app:layout_constraintTop_toBottomOf="@id/seriaview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/dcedit"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dcedit"
+        android:ems="5"
+        app:layout_constraintTop_toBottomOf="@id/seriaedit"
+        app:layout_constraintStart_toEndOf="@id/dcview"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cellview"
+        android:text="Cell# :- "
+        app:layout_constraintTop_toBottomOf="@id/dcview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/celledit"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/celledit"
+        android:ems="5"
+        app:layout_constraintTop_toBottomOf="@id/dcedit"
+        app:layout_constraintStart_toEndOf="@id/cellview"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Btn_Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Save"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Btn_Back"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
