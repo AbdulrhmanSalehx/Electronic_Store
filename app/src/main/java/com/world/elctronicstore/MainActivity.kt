@@ -17,7 +17,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.Btn_ShowMobile).setOnClickListener {
             startActivity(Intent(this,DataShow::class.java))
         }
-
+        findViewById<Button>(R.id.Btn_ShowBrowser).setOnClickListener {
+            startActivity(Intent(this,BrowserActivity::class.java))
+        }
+        findViewById<Button>(R.id.Btn_Count).setOnClickListener {
+            startActivity(Intent(this,CounterActivity::class.java))
+        }
     }
     companion object{
         var mboList=listOf<Mobile>()
