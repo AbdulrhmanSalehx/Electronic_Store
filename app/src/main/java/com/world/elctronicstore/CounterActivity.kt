@@ -10,8 +10,10 @@ class CounterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_counter)
         val countr=findViewById<TextView>(R.id.count)
+        var e:Int
         findViewById<Button>(R.id.Btn_plus).setOnClickListener {
-
+           e= Integer.parseInt(countr.text.toString())+1
+          countr.setText(e.toString())
         }
     }
 }
